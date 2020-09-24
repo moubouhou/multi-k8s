@@ -25,8 +25,8 @@ docker push docker.io/$DOCKER_ID/multiple-worker:$SHA
 kubectl apply -f k8s
 
 kubectl set image deployment/server-deployment server=$DOCKER_ID/multiple-server:$SHA
-kubectl set image deployment/client-deployment server=$DOCKER_ID/multiple-client:$SHA
-kubectl set image deployment/worker-deployment server=$DOCKER_ID/multiple-worker:$SHA
+kubectl set image deployment/client-deployment client=$DOCKER_ID/multiple-client:$SHA
+kubectl set image deployment/worker-deployment worker=$DOCKER_ID/multiple-worker:$SHA
 
 
 
